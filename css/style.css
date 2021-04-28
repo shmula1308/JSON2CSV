@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  background-color: #fcecdd;
+}
+
+/* GENERAL STYLING */
+
+h1 {
+  margin: 0;
+}
+
+textarea {
+  height: 350px;
+  resize: none;
+  font-family: inherit;
+  background-color: #ffc288;
+  padding: 1em;
+  border: none;
+  border: 6px solid #ff6701;
+  border-radius: 3px;
+  outline: none;
+}
+
+.data-label {
+  font-size: 1.9rem;
+  color: #fea82f;
+}
+
+/* BUTTONS */
+
+.btn {
+  border: none;
+  font-family: inherit;
+  background-color: #fea82f;
+  padding: 1.2em 2.3em;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:active {
+  background-color: #ff6701;
+}
+
+.swap-btn-container {
+  text-align: center;
+}
+
+.file-btn {
+  margin: 1em auto;
+  width: 170px;
+}
+
+/* LAYOUT */
+
+.app-container {
+  width: 1300px;
+  padding: 0 1.5em;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-title {
+  color: #ffc288;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.main-title span {
+  color: #fea82f;
+}
+
+.alert-container {
+  width: 400px;
+  height: 3em;
+  margin: 1em auto;
+  background-color: #8fd9a8;
+  /* background-color:#f05945;fail,warning! */
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15em;
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 42%;
+}
+
+.btns-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0.5em 4em 0.5em;
+}

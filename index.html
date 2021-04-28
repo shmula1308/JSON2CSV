@@ -4,56 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
     <title>JSON to CSV Converter</title>
   </head>
   <body>
+    <h1 class="main-title">
+      <span class="accent">JSON</span> to
+      <span class="accent"> CSV</span> Converter
+    </h1>
+    <div class="swap-btn-container">
+      <button class="btn swap-btn">CSV to JSON</button>
+      <button class="btn swap-btn" style="display: none">JSON to CSV</button>
+      <!-- <div class="alert-container"></div> -->
+    </div>
     <div class="page-container">
       <div class="app-container">
-        <h1 class="main-title">
-          <span class="accent">JSON</span> to
-          <span class="accent"> CSV</span> Converter
-        </h1>
-        <div class="alert-container"></div>
         <form>
-          <div class="data-container">
-            <div class="json-data-container">
-              <label for="json-data">JSON</label>
+          <div class="form-container">
+            <div class="data-container">
+              <label for="json-data" class="data-label">JSON</label>
               <textarea
                 name="json-data"
                 id="json-data"
                 cols="30"
                 rows="10"
+                placeholder="type or paste your JSON here"
               ></textarea>
-              <button class="btn"><i></i>UPLOAD FILE</button>
+              <button class="btn file-btn"><i></i>UPLOAD FILE</button>
               <!-- <button class="btn">Name of uploaded file</button> or change button text above-->
               <label for="json-file-path">URL</label>
               <input type="text" id="json-file-path" />
             </div>
             <div class="btns-container">
-              <button class="convert"><i></i>Convert</button>
-              <button class="clear"><i></i>Clear</button>
+              <button class="btn convert"><i></i>Convert</button>
+              <button class="btn clear"><i></i>Clear</button>
             </div>
-            <div class="csv-data-container">
-              <label for="csv-data">CSV</label>
+            <div class="data-container">
+              <label for="csv-data" class="data-label">CSV</label>
               <textarea
                 name="csv-data"
                 id="csv-data"
                 cols="30"
                 rows="10"
+                placeholder="OUTPUT"
               ></textarea>
-              <button class="btn"><i></i>DOWNLOAD FILE</button>
+              <button class="btn file-btn"><i></i>DOWNLOAD FILE</button>
               <!-- <button class="btn">Name of uploaded file</button> or change button text above-->
               <label for="csv-path-save">URL</label>
               <input type="text" id="csv-path-save" />
             </div>
           </div>
         </form>
-        <div class="swap-btn-container">
-          <button class="btn swap-btn">CSV to JSON</button>
-          <button class="btn swap-btn" style="display: none">
-            JSON to CSV
-          </button>
-        </div>
       </div>
     </div>
   </body>
