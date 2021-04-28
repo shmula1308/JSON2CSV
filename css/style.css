@@ -7,11 +7,22 @@
 }
 
 body {
+  position: relative;
   font-family: "Noto Sans KR", sans-serif;
   margin: 0;
-  background-color: #fcecdd;
+  background-color: #bbe4e9;
+  overflow: hidden;
+  color: #363333;
 }
 
+fieldset {
+  border: 1px solid #363333;
+}
+
+legend {
+  color: inherit;
+  border: none;
+}
 /* GENERAL STYLING */
 
 h1 {
@@ -19,20 +30,48 @@ h1 {
 }
 
 textarea {
+  width: 100%;
   height: 350px;
   resize: none;
   font-family: inherit;
-  background-color: #ffc288;
+  background-color: #79c2d0;
   padding: 1em;
   border: none;
-  border: 6px solid #ff6701;
-  border-radius: 3px;
   outline: none;
 }
 
+textarea::placeholder {
+  color: #363333;
+}
+
 .data-label {
+  text-align: center;
   font-size: 1.9rem;
-  color: #fea82f;
+  color: #53a8b6;
+  margin-bottom: 0.5em;
+}
+
+input[type="text"] {
+  width: 300px;
+  outline: none;
+  padding: 0.6em;
+  border: none;
+  font-family: inherit;
+  color: #363333;
+}
+input[type="text"]::placeholder {
+  color: inherit;
+}
+
+.url-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em auto;
+}
+
+.url-input-container label {
+  margin-bottom: 0.5em;
 }
 
 /* BUTTONS */
@@ -40,19 +79,17 @@ textarea {
 .btn {
   border: none;
   font-family: inherit;
-  background-color: #fea82f;
-  padding: 1.2em 2.3em;
+  padding: 0.8em 1.8em;
   margin-bottom: 10px;
   border-radius: 3px;
   cursor: pointer;
+  color: inherit;
+  background-color: #ebf0f6;
 }
 .btn:hover,
 .btn:active {
-  background-color: #ff6701;
-}
-
-.swap-btn-container {
-  text-align: center;
+  background-color: #79c2d0;
+  color: #fff;
 }
 
 .file-btn {
@@ -60,6 +97,36 @@ textarea {
   width: 170px;
 }
 
+.btn-container {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-container span {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: #5585b5;
+  border-radius: 50%;
+  transform: translate(-91%, -5%);
+}
+
+.swap-btn-container {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.swap-btn-container label {
+  color: #fea82f;
+}
 /* LAYOUT */
 
 .app-container {
@@ -72,24 +139,27 @@ textarea {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
 }
 
 .main-title {
-  color: #ffc288;
+  color: #53a8b6;
   text-align: center;
-  margin-top: 1em;
+  margin: 1em 0;
 }
 
 .main-title span {
-  color: #fea82f;
+  color: #5585b5;
 }
 
 .alert-container {
+  display: none;
+  position: absolute;
   width: 400px;
   height: 3em;
-  margin: 1em auto;
   background-color: #8fd9a8;
+  left: 50%;
+  transform: translate(-50%);
+
   /* background-color:#f05945;fail,warning! */
 }
 

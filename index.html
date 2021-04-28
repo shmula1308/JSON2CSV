@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>JSON to CSV Converter</title>
@@ -14,27 +20,41 @@
       <span class="accent"> CSV</span> Converter
     </h1>
     <div class="swap-btn-container">
-      <button class="btn swap-btn">CSV to JSON</button>
-      <button class="btn swap-btn" style="display: none">JSON to CSV</button>
-      <!-- <div class="alert-container"></div> -->
+      <label for="btn-switch">JSON2CSV</label>
+      <div class="btn-container" id="btn-switch">
+        <span class="swicth"></span>
+      </div>
+      <label for="btn-switch">CSV2JSON</label>
     </div>
+    <div class="alert-container"></div>
     <div class="page-container">
       <div class="app-container">
         <form>
           <div class="form-container">
             <div class="data-container">
               <label for="json-data" class="data-label">JSON</label>
-              <textarea
-                name="json-data"
-                id="json-data"
-                cols="30"
-                rows="10"
-                placeholder="type or paste your JSON here"
-              ></textarea>
-              <button class="btn file-btn"><i></i>UPLOAD FILE</button>
+              <fieldset>
+                <legend>paste JSON here</legend>
+                <textarea
+                  name="json-data"
+                  id="json-data"
+                  cols="30"
+                  rows="10"
+                  class="json"
+                ></textarea>
+              </fieldset>
+              <button class="btn file-btn">
+                <i class="fas fa-upload"></i><br />UPLOAD FILE
+              </button>
               <!-- <button class="btn">Name of uploaded file</button> or change button text above-->
-              <label for="json-file-path">URL</label>
-              <input type="text" id="json-file-path" />
+              <div class="url-input-container">
+                <label for="json-file-path">URL:</label>
+                <input
+                  type="text"
+                  id="json-file-path"
+                  placeholder="local url..."
+                />
+              </div>
             </div>
             <div class="btns-container">
               <button class="btn convert"><i></i>Convert</button>
@@ -42,17 +62,31 @@
             </div>
             <div class="data-container">
               <label for="csv-data" class="data-label">CSV</label>
-              <textarea
-                name="csv-data"
-                id="csv-data"
-                cols="30"
-                rows="10"
-                placeholder="OUTPUT"
-              ></textarea>
-              <button class="btn file-btn"><i></i>DOWNLOAD FILE</button>
+              <fieldset>
+                <legend>RESULT</legend>
+                <textarea
+                  name="csv-data"
+                  id="csv-data"
+                  cols="30"
+                  rows="10"
+                  placeholder="OUTPUT"
+                  class="csv"
+                  disabled
+                >
+                </textarea>
+              </fieldset>
+              <button class="btn file-btn">
+                <i class="fas fa-download"></i><br />DOWNLOAD FILE
+              </button>
               <!-- <button class="btn">Name of uploaded file</button> or change button text above-->
-              <label for="csv-path-save">URL</label>
-              <input type="text" id="csv-path-save" />
+              <div class="url-input-container">
+                <label for="csv-path-save">URL:</label>
+                <input
+                  type="text"
+                  id="csv-path-save"
+                  placeholder="local url..."
+                />
+              </div>
             </div>
           </div>
         </form>
