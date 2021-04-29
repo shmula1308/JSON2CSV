@@ -11,6 +11,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/prism.css" />
+    <script src="js/prism.js"></script>
     <script src="js/script.js" defer></script>
     <title>JSON to CSV Converter</title>
   </head>
@@ -41,10 +43,13 @@
                   cols="30"
                   rows="10"
                   class="json"
+                  placeholder="Nested JSON structures are not supported"
+                  spellcheck="false"
                 ></textarea>
               </fieldset>
               <button class="btn file-btn">
                 <i class="fas fa-upload"></i><br />UPLOAD FILE
+                <input type="file" class="file" accept=".json" />
               </button>
               <!-- <button class="btn">Name of uploaded file</button> or change button text above-->
               <div class="url-input-container">
@@ -69,9 +74,9 @@
                   id="csv-data"
                   cols="30"
                   rows="10"
-                  placeholder="OUTPUT"
+                  placeholder="Shpend"
                   class="csv"
-                  disabled
+                  spellcheck="false"
                 >
                 </textarea>
               </fieldset>
