@@ -28,14 +28,14 @@
       </div>
       <label for="btn-switch">CSV2JSON</label>
     </div>
-    <div class="alert-container"></div>
+    <div class="alert"></div>
     <div class="page-container">
       <div class="app-container">
         <form>
           <div class="form-container">
             <div class="data-container">
               <label for="json-data" class="data-label">JSON</label>
-              <fieldset>
+              <fieldset class="json-fieldset">
                 <legend>paste JSON here</legend>
                 <textarea
                   name="json-data"
@@ -49,21 +49,21 @@
               </fieldset>
               <button class="btn file-btn">
                 <i class="fas fa-upload"></i><br />UPLOAD FILE
-                <input type="file" class="file" accept=".json" />
+                <input type="file" class="upload-file-input" accept=".json" />
               </button>
-              <!-- <button class="btn">Name of uploaded file</button> or change button text above-->
               <div class="url-input-container">
-                <label for="json-file-path">URL:</label>
+                <label for="json-file-path">Local file path</label>
                 <input
                   type="text"
                   id="json-file-path"
                   placeholder="local url..."
                 />
+                <button type="button" class="btn url-btn">Submit</button>
               </div>
             </div>
             <div class="btns-container">
-              <button class="btn convert"><i></i>Convert</button>
-              <button class="btn clear"><i></i>Clear</button>
+              <button type="button" class="btn convert"><i></i>Convert</button>
+              <button type="button" class="btn clear"><i></i>Clear</button>
             </div>
             <div class="data-container">
               <label for="csv-data" class="data-label">CSV</label>
@@ -80,17 +80,18 @@
                 >
                 </textarea>
               </fieldset>
-              <button class="btn file-btn">
-                <i class="fas fa-download"></i><br />DOWNLOAD FILE
+              <button class="btn file-btn download" download>
+                <i class="fas fa-download"></i></br>DOWNLOAD FILE
               </button>
               <!-- <button class="btn">Name of uploaded file</button> or change button text above-->
               <div class="url-input-container">
-                <label for="csv-path-save">URL:</label>
+                <label for="csv-path-save">Local file path</label>
                 <input
                   type="text"
                   id="csv-path-save"
                   placeholder="local url..."
                 />
+                <button type="button" class="btn url-btn">Save</button>
               </div>
             </div>
           </div>

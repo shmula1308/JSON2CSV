@@ -93,6 +93,7 @@ input[type="text"]::placeholder {
 }
 
 .file-btn {
+  position: relative;
   margin: 1em auto;
   width: 170px;
 }
@@ -127,6 +128,10 @@ input[type="text"]::placeholder {
 .swap-btn-container label {
   color: #fea82f;
 }
+
+.url-btn {
+  margin-top: 1em;
+}
 /* LAYOUT */
 
 .app-container {
@@ -151,23 +156,33 @@ input[type="text"]::placeholder {
   color: #5585b5;
 }
 
-.alert-container {
+.alert {
+  margin: 0 auto;
   display: none;
-  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
   width: 400px;
   height: 3em;
+  margin-top: 1.5em;
   background-color: #8fd9a8;
-  left: 50%;
-  transform: translate(-50%);
+}
 
-  /* background-color:#f05945;fail,warning! */
+.success {
+  display: flex;
+  background-color: #8fd9a8;
+}
+
+.fail {
+  display: flex;
+  background-color: #f05945;
 }
 
 .form-container {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 15em;
+  margin-bottom: 10em;
 }
 
 .data-container {
@@ -181,4 +196,14 @@ input[type="text"]::placeholder {
   flex-direction: column;
   justify-content: center;
   margin: 0 0.5em 4em 0.5em;
+}
+
+.upload-file-input {
+  position: absolute;
+  width: 170px;
+  height: 60px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background-color: #fea82f;
 }
